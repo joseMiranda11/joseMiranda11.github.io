@@ -13,6 +13,10 @@ body {
   text-align: left;
 }
 
+p, div,td {
+  text-align: left;
+}
+
 .t1 {
   font-family: arial, verdana, helvetica, sans-serif;
   font-size: 1.5em;
