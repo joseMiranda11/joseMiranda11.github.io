@@ -27,117 +27,109 @@
 
 <body onload="showhide(document.getElementById('info_promociones'), document.getElementById('lista_promociones'))">
     <div id="contenido">
-        <!--
-************************************************
-*                  CABECERA                    *
-************************************************
--->
 
-        <div id="logo">
-            <span id="mis">mis</span><span id="libros">Libros</span>
-        </div>
+        <!-- CABECERA -->
+        <header>
+            <div id="logo">
+                <span id="mis">mis</span><span id="libros">Libros</span>
+            </div>
 
-        <p class="t1">Formulario de compra</p>
+            <h1 class="t1">Formulario de compra</h1>
 
-        <div id="pasos">
-            <strong>Paso:</strong><img src="img/1.png" alt="" /><img src="img/2on.png" alt="" width="63"
-                height="42" /><img src="img/3.png" alt="" width="85" height="42" />
-        </div>
+            <nav>
+                <div id="pasos">
+                    <strong>Paso:</strong><img src="img/1.png" alt="" /><img src="img/2on.png" alt="" width="63"
+                        height="42" /><img src="img/3.png" alt="" width="85" height="42" />
+                </div>
 
-        <div id="imprimir">
-            <a href="javascript:print()"><img src="img/iconPrint.gif" width="20" alt="Imprimir" /></a>
-            <a href="javascript:print()">Imprimir</a>
-        </div>
+                <div id="imprimir">
+                    <a href="javascript:print()"><img src="img/iconPrint.gif" width="20" alt="Imprimir" /></a>
+                    <a href="javascript:print()">Imprimir</a>
+                </div>
 
-        <div id="ayuda">
-            <img src="img/help.gif" alt="Ayuda" onclick="window.location='vacio.html'" width="30" />
-        </div>
+                <div id="ayuda">
+                    <img src="img/help.gif" alt="Ayuda" onclick="window.location='vacio.html'" width="30" />
+                </div>
+            </nav>
+        </header>
 
+        <!-- Contenido de la CESTA de la compra -->
+        <section id="articulos">
 
-        <!--
-************************************************
-*      Contenido de la CESTA de la compra      *
-************************************************
--->
-
-        <div id="articulos">
-
-            <p class="t2">Cesta de la compra</p>
+            <h2 class="t2">Cesta de la compra</h2>
 
             <center>
                 <p><strong>Artículos en la cesta de la compra</strong></p>
             </center>
 
             <table id="tabla_compra">
-                <tr id="conceptos">
-                    <td><b>Producto</b></td>
-                    <td><b>PVP</b></td>
-                    <td><b>Uds.</b></td>
-                    <td><b>Eur.</b></td>
-                </tr>
-                <tr class="producto">
-                    <td class="producto" id="id978842043022">
-                        <p><a href="http://www.lamardeletras.com/tienda.php?ver=libro&codigo=22012"><img
-                                    src="img/978842043022.GIF" alt="" />Dónde viven los monstruos</a>
-                            de SENDAK, MAURICE.</p>
-                        <p>Editorial Alfaguara: Madrid, 1995.</p>
-                        <p>ISBN: 978-84-20430-22-5 </p>
-                    </td>
-                    <td>13,45 &euro;</td>
-                    <td><input type="text" id="a_uds" name="a_uds" value="1" size="4"
-                            title="Ingrese la cantidad de unidades deseada" /></td>
-                    <td>13,45 &euro;</td>
-                </tr>
-                <tr class="producto">
-                    <td class="producto" id="id978849638856">
-                        <p><a href="http://www.lamardeletras.com/tienda.php?ver=libro&codigo=25924"><img
-                                    src="img/978849638856.GIF" alt="" />Los tres bandidos</a>
-                            de UNGERER, TOMI. </p>
-                        <p>Editorial Kalandraka: Sevilla 2007.</p>
-                        <p>ISBN 978-84-96388-56-7</p>
-                    </td>
-                    <td>15,00 &euro;</td>
-                    <td><input type="text" id="b_uds" name="b_uds" value="1" size="4"
-                            title="Ingrese la cantidad de unidades deseada" /></td>
-                    <td>15,00 &euro;</td>
-                </tr>
-                <tr class="producto">
-                    <td class="producto" id="id978842418108">
-                        <p><a href="http://www.lamardeletras.com/tienda.php?ver=libro&codigo=40898"><img
-                                    src="img/978842418108.GIF" alt="" />El día en que a mamá se le puso cara de
-                                tetera</a>
-                            de SAIZ, RAQUEL. </p>
-                        <p>OQO Editora: Pontevedra, 2007.</p>
-                        <p>ISBN: 978-84-96788-37-4 </p>
-                    </td>
-                    <td>12,50 &euro;</td>
-                    <td><input type="text" id="c_uds" name="c_uds" value="2" size="4"
-                            title="Ingrese la cantidad de unidades deseada" /></td>
-                    <td>25,00 &euro;</td>
-                </tr>
-                <tr id="total">
-                    <td colspan="3" align="right"><b>Precio Total</b></td>
-                    <td>53,45 &euro;</td>
-                </tr>
+                <thead>
+                    <tr id="conceptos">
+                        <th>Producto</th>
+                        <th>PVP</th>
+                        <th>Uds.</th>
+                        <th>Eur.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="producto">
+                        <td class="producto" id="id978842043022">
+                            <p><a href="http://www.lamardeletras.com/tienda.php?ver=libro&codigo=22012"><img
+                                        src="img/978842043022.GIF" alt="" />Dónde viven los monstruos</a>
+                                de SENDAK, MAURICE.</p>
+                            <p>Editorial Alfaguara: Madrid, 1995.</p>
+                            <p>ISBN: 978-84-20430-22-5 </p>
+                        </td>
+                        <td>13,45 &euro;</td>
+                        <td><input type="text" id="a_uds" name="a_uds" value="1" size="4"
+                                title="Ingrese la cantidad de unidades deseada" /></td>
+                        <td>13,45 &euro;</td>
+                    </tr>
+                    <tr class="producto">
+                        <td class="producto" id="id978849638856">
+                            <p><a href="http://www.lamardeletras.com/tienda.php?ver=libro&codigo=25924"><img
+                                        src="img/978849638856.GIF" alt="" />Los tres bandidos</a>
+                                de UNGERER, TOMI. </p>
+                            <p>Editorial Kalandraka: Sevilla 2007.</p>
+                            <p>ISBN 978-84-96388-56-7</p>
+                        </td>
+                        <td>15,00 &euro;</td>
+                        <td><input type="text" id="b_uds" name="b_uds" value="1" size="4"
+                                title="Ingrese la cantidad de unidades deseada" /></td>
+                        <td>15,00 &euro;</td>
+                    </tr>
+                    <tr class="producto">
+                        <td class="producto" id="id978842418108">
+                            <p><a href="http://www.lamardeletras.com/tienda.php?ver=libro&codigo=40898"><img
+                                        src="img/978842418108.GIF" alt="" />El día en que a mamá se le puso cara de
+                                    tetera</a>
+                                de SAIZ, RAQUEL. </p>
+                            <p>OQO Editora: Pontevedra, 2007.</p>
+                            <p>ISBN: 978-84-96788-37-4 </p>
+                        </td>
+                        <td>12,50 &euro;</td>
+                        <td><input type="text" id="c_uds" name="c_uds" value="2" size="4"
+                                title="Ingrese la cantidad de unidades deseada" /></td>
+                        <td>25,00 &euro;</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr id="total">
+                        <td colspan="3" align="right"><b>Precio Total</b></td>
+                        <td>53,45 &euro;</td>
+                    </tr>
+                </tfoot>
             </table>
 
             <p id="info_en">Non european customers can request a VAT refund</p>
 
-        </div>
+        </section>
 
 
-        <!--
-************************************************
-*             DATOS de facturación             *
-************************************************
--->
-
+        <!-- DATOS de facturación -->
         <section id="datos">
-
             <h2 class="t2">Datos de facturación</h2>
-
             <p class="info"><span class="i">i</span> Los campos marcados en rojo son obligatorios.</p>
-
             <form action="vacio.html">
                 <table id="tabladatos">
                     <tr>
@@ -209,7 +201,7 @@
                         </td>
                         <td>
                             <div class="campo_form">
-                                <label>Horario de entrega </label>
+                                <label for="horario">Horario de entrega </label>
                                 <select name="horario">
                                     <option value="all">Todo el día</option>
                                     <option value="a">De 9:00 a 14:00 horas</option>
@@ -365,4 +357,5 @@
         </footer>
     </div>
 </body>
+
 </html>
