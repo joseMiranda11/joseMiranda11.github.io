@@ -18,7 +18,7 @@
 	  font-family: arial, verdana, helvetica, sans-serif;
   	font-size: 1.5em;
   	font-weight: bold;
-	  color: #797676;
+	  color: #000000;
   	clear: both;
   	text-align: right;
 	}
@@ -27,14 +27,14 @@
 	  font-size: 1.2em;
 	  font-weight: bold;
 		color: #fff;
-		background-color: #808000;
+		background-color: #363601;
 	  padding: 0.3em;
 	}
 	
 	.t3{
 	  font-size: 1.2em;
 	  font-weight: bold;
-		color: #808000;
+	  background-color: #363601;
 	}
 
 
