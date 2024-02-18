@@ -116,7 +116,7 @@
 		font-size: 1em;
 	}
 	
-	#tabla_compra td{
+	#tabla_compra td,#tabla_compra th{
 	  padding: 0.5em;
 	}
 	
@@ -125,7 +125,7 @@
 		border: 1px solid #ccc;
 	}
 	
-	#total td{
+	#total td,#total th{
 	  padding-top: 0.5em;
 		border-top: 1px solid #ccc;
 	}
